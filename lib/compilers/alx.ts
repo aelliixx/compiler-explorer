@@ -70,7 +70,7 @@ export class AlxCompiler extends BaseCompiler {
 
     override optionsForFilter(filters: ParseFiltersAndOutputOptions, outputFilename: any) {
         // return ['--binary-dir', path.dirname(outputFilename)];
-        return ['-o', this.filename(outputFilename), filters.binary ? '-t' : '-S'];
+        return ['-o', this.filename(outputFilename), filters.binary ? '' : '-S'];
     }
 
     override getObjdumpOutputFilename(defaultOutputFilename: string) {

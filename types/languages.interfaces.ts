@@ -24,6 +24,7 @@
 
 export type LanguageKey =
     | 'ada'
+    | 'alx'
     | 'analysis'
     | 'assembly'
     | 'c'

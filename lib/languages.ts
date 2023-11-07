@@ -42,6 +42,17 @@ type DefKeys =
 type LanguageDefinition = Pick<Language, DefKeys>;
 
 const definitions: Record<LanguageKey, LanguageDefinition> = {
+    alx: {
+        name: 'alx',
+        monaco: 'alx',
+        extensions: ['.alx'],
+        alias: [],
+        logoUrl: 'alx.svg',
+        logoUrlDark: null,
+        formatter: null,
+        previewFilter: null,
+        monacoDisassembly: null,
+    },
     jakt: {
         name: 'Jakt',
         monaco: 'jakt',

@@ -34,7 +34,6 @@ import _ from 'underscore';
 
 import type {CacheableValue} from '../types/cache.interfaces.js';
 import type {ResultLine} from '../types/resultline/resultline.interfaces.js';
-import {logger} from './logger.js';
 
 const tabsRe = /\t/g;
 const lineRe = /\r?\n/;
@@ -410,7 +409,6 @@ export function resolvePathFromAppRoot(...args: string[]) {
 
 export async function fileExists(filename: string): Promise<boolean> {
     try {
-        logger.info('Filename: ' + filename);
         const stat = await fs.stat(filename);
         return stat.isFile();
     } catch {

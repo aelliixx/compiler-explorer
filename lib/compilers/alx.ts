@@ -27,7 +27,6 @@ import path from 'path';
 import type {PreliminaryCompilerInfo} from '../../types/compiler.interfaces.js';
 import type {ParseFiltersAndOutputOptions} from '../../types/features/filters.interfaces.js';
 import {BaseCompiler} from '../base-compiler.js';
-import {logger} from '../logger.js';
 
 export class AlxCompiler extends BaseCompiler {
     static get key() {
@@ -41,7 +40,6 @@ export class AlxCompiler extends BaseCompiler {
     }
 
     override getCompilerResultLanguageId() {
-        logger.info('getCompilerResult for alx');
         return 'asm';
     }
 
@@ -67,7 +65,6 @@ export class AlxCompiler extends BaseCompiler {
         );
 
         objdumpResult.languageId = 'asm';
-        logger.info('Hello from alx!');
         return objdumpResult;
     }
 
